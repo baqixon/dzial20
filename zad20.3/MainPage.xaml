@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="zad20._3.MainPage">
+
+    <ScrollView>
+
+        <VerticalStackLayout
+            Padding="20"
+            Spacing="20"
+            VerticalOptions="Center"
+            HorizontalOptions="Center">
+
+            <Label Text="Obraz lokalny"
+                   FontSize="22"
+                   FontAttributes="Bold" />
+
+            <Image x:Name="mainImage"
+                   Source="dotnet_bot.png"
+                   Aspect="AspectFit"
+                   HeightRequest="200"
+                   WidthRequest="300"
+                   HorizontalOptions="Center" />
+
+            <Label x:Name="aspectLabel"
+                   Text="Aktualny tryb: AspectFit"
+                   FontSize="18"
+                   TextColor="Blue" />
+
+            <ImageButton Source="dotnet_bot.png"
+                         WidthRequest="100"
+                         HeightRequest="100"
+                         BackgroundColor="LightGray"
+                         Clicked="OnChangeAspectClicked" />
+
+            <Label Text="Animowany GIF"
+                   FontSize="22"
+                   FontAttributes="Bold" />
+
+            <Image Source="loading.gif"
+                   HeightRequest="150"
+                   WidthRequest="150" />
+
+            <Label Text="Obraz z internetu"
+                   FontSize="22"
+                   FontAttributes="Bold" />
+
+            <Image x:Name="remoteImage"
+                   HeightRequest="200"
+                   WidthRequest="300"
+                   Aspect="AspectFit"
+                   PropertyChanged="RemoteImage_PropertyChanged">
+
+                <Image.Source>
+                    <UriImageSource
+                        Uri="https://media1.tenor.com/m/QjAApITvqSIAAAAC/smurf-cat.gif"
+                        CachingEnabled="True"
+                        CacheValidity="7.00:00:00" />
+                </Image.Source>
+
+            </Image>
+
+            <Label x:Name="loadingLabel"
+                   Text="Ładowanie obrazu..."
+                   FontSize="18"
+                   TextColor="Green" />
+
+        </VerticalStackLayout>
+
+    </ScrollView>
+
+</ContentPage>

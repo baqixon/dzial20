@@ -1,0 +1,9 @@
+<Solution>
+  <Project Path="zad20.2/zad20.2.csproj" />
+  <Project Path="zad20.3/zad20.3.csproj" Id="83a3fe87-c88c-4493-a405-90d4301a1c4c">
+    <Deploy Solution="Debug|*" />
+  </Project>
+  <Project Path="zad20.4/zad20.4.csproj" Id="b284aead-5b51-40ef-ab88-f67ccf515330">
+    <Deploy Solution="Debug|*" />
+  </Project>
+</Solution>

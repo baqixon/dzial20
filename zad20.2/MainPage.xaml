@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="zad20._2.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+        Padding="20"
+        Spacing="20"
+        VerticalOptions="Center"
+        HorizontalOptions="Center">
+
+            <Label Text="Obraz lokalny"
+               FontSize="22"
+               FontAttributes="Bold" />
+
+            <Image Source="dotnet_bot.png"
+               Aspect="AspectFit"
+               HeightRequest="200"
+               HorizontalOptions="Center" />
+
+            <Label Text="Obraz z internetu"
+               FontSize="22"
+               FontAttributes="Bold" />
+            <Image HeightRequest="200"
+               WidthRequest="300"
+               Aspect="AspectFit">
+
+                <Image.Source>
+                    <UriImageSource
+                    Uri="https://i.kym-cdn.com/entries/icons/original/000/043/403/cover3.jpg"
+                    CachingEnabled="True"
+                    CacheValidity="7.00:00:00" />
+                </Image.Source>
+
+            </Image>
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
